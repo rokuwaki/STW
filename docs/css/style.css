@@ -198,7 +198,7 @@ tbody tr.row-sep {
 #menu-primary {
   letter-spacing: 3px;
   background-color: rgba(240, 238, 233, 0.4);
-  padding: 2rem 0 2rem calc((100vw - 1920px)/2 + 2rem);
+  padding: 2rem 0 2rem max(2rem, calc(50vw - 496px));  /* ← 変更 */
   margin: 0;
   color: #fff;
   line-height: 2rem;
@@ -217,14 +217,14 @@ tbody tr.row-sep {
 
 #menu-primary a:hover,
 #menu-primary a:active {
-  color: #fff;
+  color: #777;
 }
 
 ul.menu-items {
   display: flex;
   list-style: none;
   padding: 0;
-  margin: 0 calc((100vw - 1920px)/2 + 2rem) 0 0;
+  margin: 0 max(2rem, calc(50vw - 496px)) 0 0;  /* ← 変更 */
   justify-content: flex-end;
 }
 
@@ -251,17 +251,6 @@ li.menu-item {
 
 .footer #menu-brand {
   font-weight: normal;
-}
-
-/* large screen, where the navbar has its maximum width (for the nice view on the very large screen) */
-@media only screen and (max-width: 1920px) {
-  #menu-primary {
-    padding: 2rem 0 2rem 2rem;
-  }
-
-  ul.menu-items {
-    margin: 0 2rem 0 0;
-  }
 }
 
 /* middle screen, where the cover title collapses */
